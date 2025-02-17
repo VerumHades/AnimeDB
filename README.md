@@ -23,6 +23,13 @@ It allows users to connect to a database, manage anime-related data, and perform
 
 ## Getting Started
 
+### The Easy Way
+
+1. Download the [latest release](https://github.com/VerumHades/AnimeDB/releases/latest/download/release.zip)
+2. Extract the zip archive
+3. Find and run `AnimeDB.exe`
+
+### The Visual Studio Way
 1. **Clone the repository:**
    ```sh
    https://github.com/VerumHades/AnimeDB.git
@@ -42,7 +49,17 @@ Press the run button in visual studio
 
 ## Usage
 
+
+### Navigating around the application
+
+You may navigate using the `w`, `arrow_up` and `s`, `arrow_down` keys to select options.
+![Image](./Images/screenshot.png)
+> Options preceded by `>` are selected
+
 Upon launching the application, you'll be prompted to connect to a database by entering:
+> Warning: Connecting may take 5 seconds, the freeze when trying to connect, so just wait   
+> Tip: Ticking the `Trust server certificate` might fix your connection issue, otherwise check your credentials
+
 - Server address
 - Database name
 - Username and password
