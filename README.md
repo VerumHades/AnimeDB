@@ -76,7 +76,7 @@ Oh and if anything fails you get error messages:
 Or if something goes right you get informational messages:  
 ![Image](./AnimeDB/Images/info.png) 
 
-Oh yeah and there is at least on of these confirmation menus, press `arrow_left` or `arrow_right` to select an option and `enter` to confirm it!
+Oh yeah and there is at least on of these confirmation menus, press `arrow_left` or `arrow_right` to select an option and `enter` to confirm it!  
 ![Image](./AnimeDB/Images/confirm.png) 
 
 > Note: You might need to resize the window if you cannot see everything or the UI is looking weird 
