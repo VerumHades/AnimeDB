@@ -1,4 +1,4 @@
-﻿# AnimeDB Console Application
+# AnimeDB Console Application
 
 AnimeDB is a console-based application for managing an anime database. 
 It allows users to connect to a database, manage anime-related data, and perform various operations such as creating, renaming, and deleting entries.
@@ -68,7 +68,3 @@ Feel free to submit issues or pull requests to improve the project.
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-Let me know if you'd like any modifications! 😊
