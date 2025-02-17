@@ -25,19 +25,20 @@ It allows users to connect to a database, manage anime-related data, and perform
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-repo/anime-db.git
-   cd anime-db
+   https://github.com/VerumHades/AnimeDB.git
+   cd AnimeDB
    ```
+    
+2. **Open the project in Visual Studio**  
+Open the project in visual studio by clicking the AnimeDB.sln file
 
-2. **Build the project:**
-   ```sh
-   dotnet build
-   ```
+3. **Install NuGet packages if missing**  
+These two required NuGet packages might be missing so you will need to install them manualy:
+- `Microsoft.Data.SqlClient`
+- `System.Configuration.ConfigurationManager`
 
-3. **Run the application:**
-   ```sh
-   dotnet run
-   ```
+3. **Run the application:**  
+Press the run button in visual studio
 
 ## Usage
 
