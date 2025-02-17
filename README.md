@@ -1,4 +1,4 @@
-# AnimeDB Console Application
+# AnimeDB
 
 AnimeDB is a console-based application for managing an anime database. 
 It allows users to connect to a database, manage anime-related data, and perform various operations such as creating, renaming, and deleting entries.
@@ -14,6 +14,8 @@ It allows users to connect to a database, manage anime-related data, and perform
 - Simple text-based menu navigation.
 
 ## Requirements
+
+> Note: Mostly only valid if you choose to run with visual studio instead of the [latest release](https://github.com/VerumHades/AnimeDB/releases/latest/download/release.zip)
 
 - .NET SDK (latest version recommended)
 - SQL Database instance for data storage
@@ -50,21 +52,37 @@ Press the run button in visual studio
 ## Usage
 
 
-### Navigating around the application
+### Your first connection
 
 You may navigate using the `w`, `arrow_up` and `s`, `arrow_down` keys to select options.
-![Image](./Images/screenshot.png)
+![Image](./AnimeDB/Images/screenshot.png)
 > Options preceded by `>` are selected
 
-Upon launching the application, you'll be prompted to connect to a database by entering:
+You can edit a text field by hitting `enter`, most of these usually have text behind them but they might not so dont get confused.  
+![Image](./AnimeDB/Images/screenshot2.png)  
+Confirm by pressing `enter` again.
+> Note: If you want to keep the previous contents just write nothing and press `enter` this will keep the original contents before you edited
+
+You can toggle fields followed by [ ] on and off by pressing `enter` or `space`, look:  
+![Image](./AnimeDB/Images/screenshot3.png)   
+And off  
+![Image](./AnimeDB/Images/screenshot4.png)  
+
+And finally to buttons that can just be activated, these are mainly used to navigate menus but here you also use them to connect activate by pressing `enter`:
+![Image](./AnimeDB/Images/screenshot5.png)
+
+Oh and if anything fails you get error messages:  
+![Image](./AnimeDB/Images/error.png)  
+Or if something goes right you get informational messages:  
+![Image](./AnimeDB/Images/info.png) 
+
+Oh yeah and there is at least on of these confirmation menus, press `arrow_left` or `arrow_right` to select an option and `enter` to confirm it!
+![Image](./AnimeDB/Images/confirm.png) 
+
+> Note: You might need to resize the window if you cannot see everything or the UI is looking weird 
+
 > Warning: Connecting may take 5 seconds, the freeze when trying to connect, so just wait   
 > Tip: Ticking the `Trust server certificate` might fix your connection issue, otherwise check your credentials
-
-- Server address
-- Database name
-- Username and password
-
-Once connected, you can navigate the menu to manage your anime database.
 
 ### Available Actions:
 - **Create**: Users, genres, anime, movie episodes, watchlist entries
@@ -78,11 +96,3 @@ Once connected, you can navigate the menu to manage your anime database.
 - If the database connection fails, the application will return to the connection menu.
 - The database connection timeout is set to **5 seconds**.
 - Trusting the server certificate may be required for some connections.
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the project.
-
-## License
-
-This project is licensed under the MIT License.
