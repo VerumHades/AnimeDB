@@ -75,7 +75,7 @@ namespace AnimeDB.UserInterface
                 onSave(_instance);
             }));
 
-            options.Add(new LambdaMenuOption("Cancel", "", (_) =>
+            options.Add(new LambdaMenuOption("Go Back", "", (_) =>
             {
                 onCancel();
                 root.ClosePrompt();
@@ -100,7 +100,7 @@ namespace AnimeDB.UserInterface
         // El chato
         private DateTime? ParseDatetime(string dateString)
         {
-            string[] formats = { "dd-MM-yyyy", "yyyy-MM-dd", "dd-MM-yyyy HH:mm:ss" };
+            string[] formats = { "dd-MM-yyyy", "yyyy-MM-dd", "dd-MM-yyyy HH:mm:ss", "dd.MM.yyyy HH:mm:ss" };
             if (DateTime.TryParseExact(dateString, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dateTime))
                 return dateTime;
             return null;

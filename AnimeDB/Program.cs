@@ -4,7 +4,30 @@ using AnimeDB.Database.Tables;
 using AnimeDB.UserInterface;
 using AnimeDB.UserInterface.MenuOptions;
 using AnimeDB.UserInterface.prompts;
+using System.Runtime.InteropServices;
 
+// Import necessary methods for enabling virtual terminal processing.
+[DllImport("kernel32.dll", SetLastError = true)]
+static extern IntPtr GetStdHandle(int nStdHandle);
+
+[DllImport("kernel32.dll", SetLastError = true)]
+static extern bool SetConsoleMode(IntPtr hConsoleHandle, uint dwMode);
+
+[DllImport("kernel32.dll", SetLastError = true)]
+static extern uint GetConsoleMode(IntPtr hConsoleHandle, out uint lpMode);
+
+const int STD_OUTPUT_HANDLE = -11;
+const uint ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004;
+
+var consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+if (consoleHandle != IntPtr.Zero)
+{
+    uint mode;
+    if (GetConsoleMode(consoleHandle, out mode) != 0)
+    {
+        SetConsoleMode(consoleHandle, mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+    }
+}
 
 Root root = new Root();
 
@@ -116,10 +139,10 @@ var old_name = "";
 var rename_menu = new NestedMenu(
     new()
     {
-        new TextOption("Old Name", "", old_name, (a,m) => {
+        new TextOption("Old Username", "", old_name, (a,m) => {
             old_name = a;
         }),
-        new TextOption("New Name", "", new_name, (a,m) => {
+        new TextOption("New Username", "", new_name, (a,m) => {
             new_name = a;
         }),
         new LambdaMenuOption("Rename", "", (m) =>
@@ -208,7 +231,7 @@ root.Run();
 [ X ] Nastavit celý program v konfiguračním souboru.
 
 [ X ] Programátorskou dokumentaci
-[   ] Soubor README
+[ X ] Soubor README
 [ X ] V případě všech možných chyb musí program rozumným způsobem reagovat, nebo vyžadovat součinnost uživatele k vyřešení problému. 
 [   ] 1x testovací scénář ve formátu PDF (.pdf) pro spuštění aplikace, včetně nastavení a importu databázové struktury.
 [   ] Minimálně 2x testovací scénáře ve formátu PDF (.pdf), podle kterých můžeme rozumně otestovat práci vaší aplikace s daty s databáze 

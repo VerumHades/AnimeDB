@@ -131,7 +131,7 @@ namespace AnimeDB.Database
                 }
             }
 
-            root?.OpenPrompt(new InformationPrompt("Watchlist imported successfully!"));
+            root?.OpenPrompt(new InformationPrompt("User data imported successfully!"));
             return true;
         }
 

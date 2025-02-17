@@ -54,6 +54,8 @@ Press the run button in visual studio
 
 ### Your first connection
 
+> Warning: When writing time you need to stick to a format `dd-MM-yyyy HH:mm:ss`
+
 You may navigate using the `w`, `arrow_up` and `s`, `arrow_down` keys to select options.
 ![Image](./AnimeDB/Images/screenshot.png)
 > Options preceded by `>` are selected
